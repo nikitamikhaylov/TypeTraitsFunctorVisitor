@@ -14,8 +14,8 @@ int main()
 
     ConcreteVisitor<PrinterFunctor> v;
 
-    f.go(&firstAcceptor, &v, "a"); /// a--###--First Acceptor
+    f.go(&firstAcceptor, &v, "a");  /// a--###--First Acceptor
     f.go(&secondAcceptor, &v, "b"); /// b--***--Second Acceptor
-    f.go(&secondAcceptor, &v, 123); /// Wrong arguments
-    f.go(&thirdAcceptor, &v, "a"); /// No functors
+    f.go(&secondAcceptor, &v, 123); /// WRONG ARGUMENTS
+    f.go(&thirdAcceptor, &v, "a");  /// NO FUNCTOR
 }
